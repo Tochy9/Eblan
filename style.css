@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: #fff;
+    height: 100vh;
+}
+
+.cosmic-casino {
+    max-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    color: #f8d56b;
+    text-shadow: 0 0 10px rgba(248, 213, 107, 0.5);
+    margin-bottom: 10px;
+}
+
+.balance {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px 15px;
+    border-radius: 20px;
+    display: inline-block;
+    border: 1px solid #f8d56b;
+}
+
+.balance span:last-child {
+    font-weight: bold;
+    color: #f8d56b;
+    margin-left: 5px;
+}
+
+.slot-machine {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    border: 2px solid #f8d56b;
+    box-shadow: 0 0 20px rgba(248, 213, 107, 0.2);
+    margin-bottom: 20px;
+}
+
+.slots-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.slot {
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: #333;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 3px solid #f8d56b;
+}
+
+.spin-button {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.spin-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(255, 65, 108, 0.3);
+}
+
+.spin-button:active {
+    transform: translateY(0);
+}
+
+.info {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #f8d56b;
+}
+
+.info h3 {
+    color: #f8d56b;
+    margin-top: 0;
+}
+
+.info ul {
+    padding-left: 20px;
+}
+
+.info li {
+    margin-bottom: 5px;
+}
+
+/* Анимации */
+@keyframes spin {
+    0% { transform: rotateX(0); }
+    100% { transform: rotateX(360deg); }
+}
+
+.spinning {
+    animation: spin 0.5s infinite linear;
+}
+
+@keyframes win {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.win-animation {
+    animation: win 1s ease-in-out;
+    box-shadow: 0 0 20px gold;
+}
